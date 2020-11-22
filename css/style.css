@@ -75,7 +75,7 @@ a.menu-log {
     display: flex;
 }
 
-.fundo-mips {
+.fundo-mips.ativo {
     margin: 0 auto;
     padding: 0;
     width: 1001px;

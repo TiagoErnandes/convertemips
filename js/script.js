@@ -5,12 +5,12 @@ var leitorDeCSV = new FileReader();
 window.onload = function init() {
 
     leitorDeCSV.onload = leCSV;
-    const botao = document.querySelector('.executar'); 
+    const botao = document.querySelector('.executar');
     botao.addEventListener('click', resultadoFinal);
-    
+
 
 }
-
+const fundoMips = document.querySelector('[data-modal="fundo"]')
 
 function pegaCSV(inputFile) {
     var file = inputFile.files[0];
@@ -324,19 +324,19 @@ function organizarInstrucaoI(teste) {
 
     if (teste[0] == 'addi' || teste[0] == 'addiu' || teste[0] == 'stti' || teste[0] == 'sltiu' || teste[0] == 'addi' || teste[0] == 'andi' ||
         teste[0] == 'ori' || teste[0] == 'xori' || teste[0] == 'lui') {
-        console.log(`${opCode}${rd}${rt}${rs}`)
+
         return (`${opCode}${rd}${rt}${rs}`)
 
     }
 
-    console.log(`${opCode}${rs}${rt}${rd}`)
+
     return (`${opCode}${rs}${rt}${rd}`)
 }
 
 function organizarInstrucaoJ(teste) {
     let opCode = atribuirValorIntrucoes(teste[0].replace(/(\r\n|\n|\r)/gm, ""));
     let constante = ((teste[1]) >>> 0).toString(2).padStart(26, '0');
-    console.log(`${opCode}${constante}`)
+
     return (`${opCode}${constante}`)
 }
 
@@ -350,7 +350,7 @@ function organizarInstrucaoR(teste) {
     let rd = atribuirValorIntrucoes(teste[1].replace(/(\r\n|\n|\r)/gm, ""));
     let rs = atribuirValorIntrucoes(teste[2].replace(/(\r\n|\n|\r)/gm, ""));
     let rt = atribuirValorIntrucoes(teste[3].replace(/(\r\n|\n|\r)/gm, ""));
-    console.log(opCode, rs, rt, rd, shamt, func);
+
     return (`${opCode}${rs}${rt}${rd}${shamt}${func}`)
 }
 
@@ -361,7 +361,7 @@ function organizarInstrucaoRdesvio(teste) {
     let rt = atribuirValorIntrucoes(teste[2].replace(/(\r\n|\n|\r)/gm, ""));
     let shamt = ((teste[3]) >>> 0).toString(2).padStart(5, '0');
     let rs = "00000";
-    console.log(opCode, rs, rt, rd, shamt, func);
+
     return (`${opCode}${rs}${rt}${rd}${shamt}${func}`)
 }
 
@@ -408,11 +408,13 @@ function resultadoFinal() {
     })
     mostrarResultado();
     fecharModal();
+
 }
 
 
 
 function mostrarResultado() {
+    fundoMips.classList.remove('ativo');
     var resultado = '<table>';
     resultado += ` <tr>
 <th>Entrada</th>

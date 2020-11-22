@@ -5,6 +5,7 @@ const executarBotal = document.querySelector('.executarAux')
 
 
 
+
 function abrirModal(event) {
     event.preventDefault();
     containerModal.classList.add('ativo');
@@ -13,6 +14,7 @@ function abrirModal(event) {
 function fecharModal() {
 
     containerModal.classList.toggle('ativo');
+    
 }
 
 botaoArir.addEventListener('click', abrirModal);
