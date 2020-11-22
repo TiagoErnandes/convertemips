@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title> Mips</title>
+</head>
+
+<body>
+
+
+  <header class="menu">
+    <div class="menu-container">
+      <a data-modal="abrir" class="menu-logo" href="#"><img src="img/play.png" alt=""></a>
+
+      <nav class="menu-nav">
+        <ul>
+
+          <li><a class="executarAux" href="#abrir">Executar o Programa</a></li>
+          <li><a href="https://www.ifmg.edu.br/sabara" target="_blank">IFMG</a></li>
+          <li><a
+              href="https://pt.wikipedia.org/wiki/Arquitetura_MIPS#:~:text=MIPS%2C%20acr%C3%B4nimo%20para%20Microprocessor%20without,desenvolvida%20pela%20MIPS%20Computer%20Systems."
+              target="_blank">WikiMips</a></li>
+      </nav>
+      </ul>
+    </div>
+  </header>
+  <div class="fundo-mips">
+    <section class="modal-container ativo" data-modal="container">
+      <div class="modal">
+        <input type="file" id="inputCSV" onChange="pegaCSV(this)">
+        <div id="CSVsaida"></div>
+        <button type="submit" class="executar">Execute</button>
+        <button data-modal="fechar" class="fechar">X</button>
+      </div>
+    </section>
+
+    <section class="resultado">
+      <div id="resultado"></div>
+
+    </section>
+
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/modal.js"></script>
+
+</body>
+
+</html>
