@@ -80,7 +80,7 @@ a.menu-log {
     padding: 0;
     width: 1001px;
     height: 320px;
-    background: transparent url("./img/mips.png") no-repeat left bottom;
+    background: transparent url("../img/mips.png") no-repeat left bottom;
 }
 
 .modal-container {
