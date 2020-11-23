@@ -415,6 +415,7 @@ function resultadoFinal() {
 
 function mostrarResultado() {
     fundoMips.classList.remove('ativo');
+    salva.classList.remove('ativo');
     var resultado = '<table>';
     resultado += ` <tr>
 <th>Entrada</th>

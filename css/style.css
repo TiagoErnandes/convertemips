@@ -21,6 +21,7 @@ ul {
 table {
     width: 800px;
     height: 100px;
+    margin-bottom: 15px;
 }
 
 .menu {
@@ -56,7 +57,7 @@ a.menu-log {
     display: inline-block;
 }
 .menu-nav li :hover {
-    background: #016cb5;
+    background: #898989;
 }
 
 .menu-nav a {
@@ -106,6 +107,7 @@ a.menu-log {
     border: 10px solid #252525;
     box-shadow: 0 0 10px white;
     position: relative;
+    margin-bottom: 15px;
 }
 
 @keyframes modal {
@@ -132,7 +134,7 @@ a.menu-log {
     right: -30px;
     position: absolute;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-    background: #016cb5;
+    background: #898989;
     font-size: 1.2rem;
     color: white;
     font-family: "IMB Plex Mono", monospace;
@@ -153,12 +155,33 @@ a.menu-log {
 }
 
 .modal button[type="submit"] {
+    margin: 0 auto;
     display: block;
-    background: #016cb5;
+    background: #898989;
     border: none;
     border-radius: 4px;
-    width: 100%;
+    width: 50%;
     padding: 0.7rem 0.2rem;
-    color: white;
     font-family: "IMB Plex Mono", monospace;
+    cursor: pointer;
+}
+[data-salva="salva"] {
+    display: block;
+    margin: auto;
+    border: solid 1.5px #000;
+    border-radius: 4px;
+    width: 20%;
+    padding: 0.7rem 0.2rem;
+    cursor: pointer;
+    font-family: "IMB Plex Mono", monospace;
+}
+[data-salva="salva"]:hover {
+    background: #898989;
+}
+[data-salva="salva"].ativo {
+    display: none;
+}
+
+.resultado {
+    margin-top: 10px;
 }

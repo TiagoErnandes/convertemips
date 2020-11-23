@@ -32,9 +32,9 @@
   <div class="fundo-mips ativo" data-modal="fundo">
     <section class="modal-container ativo" data-modal="container">
       <div class="modal">
-        <input type="file" id="inputCSV" onChange="pegaCSV(this)">
+        <input type="file" id="inputCSV" accept="text/" onChange="pegaCSV(this)">
         <div id="CSVsaida"></div>
-        <button type="submit" class="executar">Execute</button>
+        <button type="submit" class="executar">Converter</button>
         <button data-modal="fechar" class="fechar">X</button>
       </div>
     </section>
@@ -43,10 +43,15 @@
       <div id="resultado"></div>
 
     </section>
+    <div class="salva">
+      <button data-salva="salva" class="ativo">Salvar</button>
+    </div>
 
   </div>
   <script src="js/script.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/filesaver.js"></script>
+  <script src="js/salvar.js"></script>
 
 </body>
 
