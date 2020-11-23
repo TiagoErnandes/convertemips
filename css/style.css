@@ -17,10 +17,6 @@ ul {
     margin: 0;
     font-family: "IBM Plex Mono", monospace;
 }
-body {
-    padding-bottom: 58px;
-    min-height: 100vh;
-}
 
 table {
     width: 800px;
@@ -58,6 +54,7 @@ a.menu-log {
 }
 
 .menu-nav li {
+    padding-top: 30px;
     display: inline-block;
 }
 .menu-nav li :hover {
