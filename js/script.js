@@ -223,6 +223,15 @@ function atribuirValorIntrucoes(valor) {
     if (valor == 'sra') {
         return (0 >>> 0).toString(2).padStart(6, "0");
     }
+    if (valor == 'sllv') {
+        return (0 >>> 0).toString(2).padStart(6, "0");
+    }
+    if (valor == 'srvl') {
+        return (0 >>> 0).toString(2).padStart(6, "0");
+    }
+    if (valor == 'srav') {
+        return (0 >>> 0).toString(2).padStart(6, "0");
+    }
 
 
 
